@@ -44,51 +44,33 @@ main {
     text-align: center;
 }
 
-.carrossel-ofertas {
+.carrossel-ofertas, .carrossel-promocoes-fixas {
     display: flex;
-    overflow-x: auto;
-    gap: 15px;
-    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
 }
 
-.oferta {
-    background: #fff;
-    border-radius: 8px;
-    width: 200px; /* Tamanho desejado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.oferta, .promo-fixa {
     flex: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 200px; /* Tamanho quadrado */
+    margin: 0 10px;
 }
 
-.oferta img {
-    width: 100%; /* Imagem ocupa a largura total */
+.oferta img, .promo-fixa img {
+    width: 100%;
     height: auto; /* Mantém a proporção */
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
 }
 
 .video-tintometrica {
     text-align: center;
+    margin: 20px 0;
 }
 
 iframe {
     width: 100%;
     height: 315px;
     border: none;
-    border-radius: 8px;
-}
-
-#promocoes-fixas {
-    margin-top: 30px;
-}
-
-.promo-fixa {
-    margin: 15px 0;
-}
-
-.promo-fixa img {
-    width: 100%; /* Banner ocupa a largura total */
     border-radius: 8px;
 }
 
@@ -138,16 +120,12 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .carrossel-ofertas {
+    .carrossel-ofertas, .carrossel-promocoes-fixas {
         flex-direction: column;
         align-items: center;
     }
 
-    .oferta {
-        width: 90%; /* Largura para dispositivos menores */
-    }
-
-    .promo-fixa img {
+    .oferta, .promo-fixa {
         width: 90%; /* Largura para dispositivos menores */
     }
 }
