@@ -47,25 +47,25 @@ main {
 .carrossel-ofertas {
     display: flex;
     overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
 }
 
 .oferta {
     background: #fff;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #ccc;
     border-radius: 8px;
-    width: 150px; /* Ajuste para tamanho desejado */
+    width: 200px; /* Tamanho desejado */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.quadrada {
-    height: 150px; /* Altura fixa para carrossel quadrado */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.oferta img {
+    width: 100%; /* Imagem ocupa a largura total */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px 8px 0 0;
 }
 
 .video-tintometrica {
@@ -84,10 +84,11 @@ iframe {
 }
 
 .promo-fixa {
-    background: #ffefcc;
     margin: 15px 0;
-    padding: 15px;
-    border: 1px solid #ffd700;
+}
+
+.promo-fixa img {
+    width: 100%; /* Banner ocupa a largura total */
     border-radius: 8px;
 }
 
@@ -133,4 +134,20 @@ footer {
     background: #333;
     color: white;
     position: relative;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carrossel-ofertas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .oferta {
+        width: 90%; /* Largura para dispositivos menores */
+    }
+
+    .promo-fixa img {
+        width: 90%; /* Largura para dispositivos menores */
+    }
 }
