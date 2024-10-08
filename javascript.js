@@ -1,7 +1,7 @@
 const carrosselOfertas = document.getElementById('carrossel-ofertas');
 const carrosselPromocoes = document.getElementById('carrossel-promocoes-fixas');
-const scrollAmount = 210; // Ajuste conforme necessário
-const scrollInterval = 3000; // Tempo entre as rolagens
+const scrollAmount = 210;
+const scrollInterval = 3000;
 
 // Função para rolar automaticamente
 function autoScroll(element) {
@@ -23,4 +23,11 @@ document.getElementById("contato-button").onclick = function() {
 // Ação para fechar o popup
 document.querySelector(".close").onclick = function() {
     document.getElementById("popup").classList.add("popup-hidden");
+};
+
+// Adicionando evento para fechar o popup ao clicar fora dele
+window.onclick = function(event) {
+    if (event.target === document.getElementById("popup")) {
+        document.getElementById("popup").classList.add("popup-hidden");
+    }
 };
