@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.oferta-retangular {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.carrossel-ofertas {
+    display: flex;
+    overflow-x: auto;
+}
+
+.oferta {
+    min-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.video-tintometrica {
+    text-align: center;
+}
+
+.popup-hidden {
+    display: none;
+}
+
+.popup-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+}
