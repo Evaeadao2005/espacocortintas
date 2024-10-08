@@ -1,13 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #333;
+    background: #0056b3;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -18,13 +23,24 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
 }
 
 .oferta-retangular {
-    background: #f9f9f9;
+    background: #e7f3ff;
     padding: 20px;
-    margin: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
     text-align: center;
 }
 
@@ -34,14 +50,59 @@ nav ul li {
 }
 
 .oferta {
-    min-width: 200px;
+    background: #fff;
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px; /* Ajuste para tamanho desejado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: none;
+}
+
+.quadrada {
+    height: 150px; /* Altura fixa para carrossel quadrado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .video-tintometrica {
     text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+}
+
+#promocoes-fixas {
+    margin-top: 30px;
+}
+
+.promo-fixa {
+    background: #ffefcc;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
 }
 
 .popup-hidden {
@@ -56,10 +117,20 @@ nav ul li {
     background: white;
     padding: 20px;
     border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .close {
     cursor: pointer;
     float: right;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: relative;
 }
