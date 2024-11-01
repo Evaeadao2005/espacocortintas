@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
     <title>Espaço Cor Loja de Tintas</title>
     <style>
         /* Reset básico */
@@ -29,7 +29,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             max-width: 100%;
             height: auto;
         }
@@ -279,40 +278,37 @@
 
     <!-- Banner de Entrega Grátis -->
     <div class="delivery-banner">
-        <strong>Entrega Grátis em Iguatu!</strong>
+        🚚 **Entregas Grátis em Iguatu!** 🌈
     </div>
 
     <script>
-        // Animação de texto
-        const texts = [
-            "O Melhor em Tintas!",
-            "Qualidade e Atendimento!",
-            "Sua Satisfação é Nossa Prioridade!",
-            "Venha Conhecer Nossa Loja!"
-        ];
-
+        const texts = ["Compre Tintas e Renove!", "Pintura que Encanta!", "Cores que Inspiram!", "Sua Casa com Nova Cor!"];
         let index = 0;
-        const dynamicText = document.getElementById("dynamic-text");
-        setInterval(() => {
-            dynamicText.innerText = texts[index];
-            index = (index + 1) % texts.length;
-        }, 3000);
 
-        // Carrossel de Ofertas
-        let currentIndex = 0;
+        function updateText() {
+            const dynamicText = document.getElementById("dynamic-text");
+            dynamicText.textContent = texts[index];
+            index = (index + 1) % texts.length;
+        }
+
+        setInterval(updateText, 3000); // Troca de texto a cada 3 segundos
+
+        let currentSlide = 0;
 
         function updateCarousel() {
             const carousel = document.getElementById("carousel");
-            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            const totalSlides = document.querySelectorAll(".carousel-page").length;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
         function nextSlide() {
-            currentIndex = (currentIndex + 1) % document.querySelectorAll('.carousel-page').length;
+            currentSlide = (currentSlide + 1) % document.querySelectorAll(".carousel-page").length;
             updateCarousel();
         }
 
         function prevSlide() {
-            currentIndex = (currentIndex - 1 + document.querySelectorAll('.carousel-page').length) % document.querySelectorAll('.carousel-page').length;
+            const totalSlides = document.querySelectorAll(".carousel-page").length;
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateCarousel();
         }
     </script>
