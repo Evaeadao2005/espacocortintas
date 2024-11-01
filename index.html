@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         /* Configurações de cor e fundo */
@@ -25,32 +25,27 @@
         header {
             background-color: #003366;
             color: white;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 15px 0;
             position: relative;
-            overflow: hidden;
+            overflow: hidden; /* Impede o conteúdo de ultrapassar os limites */
         }
 
         /* Estilo da logo */
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         .logo {
-            width: 120px;
+            width: 120px; /* Largura da logo */
             height: auto;
-            margin-right: 15px;
+            position: absolute; /* Fixa a logo */
+            left: 20px; /* Alinhamento à esquerda */
+            top: 50%; /* Centraliza verticalmente */
+            transform: translateY(-50%); /* Ajusta a centralização */
         }
 
-        /* Animações de texto */
+        /* Texto do cabeçalho */
         .header-text {
             font-size: 1.5em;
             font-weight: bold;
             color: #ffdd57;
+            margin-left: 140px; /* Espaço para a logo */
             white-space: nowrap;
             border-right: 2px solid #ffdd57; /* Efeito de cursor */
             animation: blink-caret 0.75s step-end infinite;
@@ -63,7 +58,7 @@
 
         /* Seção das marcas parceiras */
         .brands-section {
-            padding: 20px 0;
+            padding: 30px 0;
             background-color: #ffffff;
         }
 
@@ -203,16 +198,24 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .header-text {
+                font-size: 1.2em; /* Tamanho do texto menor em telas pequenas */
+            }
+            .logo {
+                width: 100px; /* Reduzir o tamanho da logo em telas menores */
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- Cabeçalho com Logo e Frases de Destaque -->
     <header>
-        <div class="header-content">
-            <img src="https://i.imgur.com/4CXkMO4.png" alt="Logo da Loja" class="logo">
-            <div class="header-text" id="dynamic-text"></div>
-        </div>
+        <img src="https://i.imgur.com/4CXkMO4.png" alt="Logo da Loja" class="logo">
+        <div class="header-text" id="dynamic-text"></div>
     </header>
 
     <!-- Seção das Marcas Parceiras -->
@@ -231,7 +234,7 @@
     <section class="contact-section">
         <img src="https://lh3.googleusercontent.com/p/AF1QipPQ4rSGitMKsV-yH0lHRY-molf8YVlKOTVEkeEH=s680-w680-h510" alt="Frente da Loja" class="store-image" onclick="window.open('https://maps.app.goo.gl/uv6SuyUdshVgCp3D7', '_blank')">
         <div class="contact-info">
-            <p><strong>Endereço:</strong> Av Carlos Roberto Costa, 977, Iguatu, Ceara</p>
+            <p><strong>Endereço:</strong> Av Carlos Roberto Costa, 977, Iguatu, Ceará</p>
             <a href="https://wa.me/5588996213293" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
         </div>
     </section>
@@ -241,29 +244,29 @@
         <h2>Conheça Nossa Loja</h2>
         <video controls>
             <source src="/saveclip.app_b94537846070cdcab0e8d3aa654064bc_video_dashinit.mp4" type="video/mp4">
-            Seu navegador não suporta a tag de vídeo.
+            Seu navegador não suporta o vídeo.
         </video>
     </section>
 
     <!-- Carrossel de Ofertas -->
     <section class="carousel-section">
-        <h2>Ofertas e Promoções</h2>
+        <h2>Nossas Ofertas</h2>
         <div class="carousel-container">
             <div class="carousel" id="carousel">
                 <div class="carousel-page">
-                    <img src="https://yourimage1.jpg" alt="Promoção Página 1">
+                    <img src="https://i.imgur.com/v1IrXUu.jpg" alt="Promoção Página 1">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://yourimage2.jpg" alt="Promoção Página 2">
+                    <img src="https://i.imgur.com/qcF3owE.jpg" alt="Promoção Página 2">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://yourimage3.jpg" alt="Promoção Página 3">
+                    <img src="https://i.imgur.com/ECxij0V.jpg" alt="Promoção Página 3">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://yourimage4.jpg" alt="Promoção Página 4">
+                    <img src="https://i.imgur.com/sz2Q7Vi.jpg" alt="Promoção Página 4">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://yourimage5.jpg" alt="Promoção Página 5">
+                    <img src="https://i.imgur.com/SOrGklk.jpg" alt="Promoção Página 5">
                 </div>
             </div>
             <div class="carousel-controls">
