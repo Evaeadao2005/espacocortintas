@@ -3,114 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Tintas - Sherwin-Williams</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <title>Espaço Cor Loja de Tintas</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        /* Reset básico */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        /* Configurações de cor e fundo */
+        body {
+            background-color: #f1f4f9;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Cabeçalho */
         header {
-            background-color: #0072c6;
+            background-color: #003366;
             color: white;
-            padding: 20px;
-            text-align: center; /* Centraliza o texto do cabeçalho */
-        }
-        .dynamic-text {
-            font-size: 2em;
-            font-weight: bold;
-            margin: 0;
-        }
-        .video-section, .carousel-section {
-            margin: 20px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .carousel-container {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
-            max-width: 600px;
-            margin: 0 auto;
         }
+
+        /* Estilo da logo */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        /* Animações de texto */
+        .header-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffdd57;
+            white-space: nowrap;
+            border-right: 2px solid #ffdd57; /* Efeito de cursor */
+            animation: blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #ffdd57; }
+        }
+
+        /* Seção das marcas parceiras */
+        .brands-section {
+            padding: 20px 0;
+            background-color: #ffffff;
+        }
+
+        .brands-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .brand-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        /* Seção de Contato */
+        .contact-section {
+            padding: 30px;
+            background-color: #e6eff7;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebf58;
+        }
+
+        .store-image {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .store-image:hover {
+            transform: scale(1.05);
+        }
+
+        /* Carrossel de Ofertas */
+        .carousel-section {
+            text-align: center;
+            padding: 30px;
+            background-color: #f1f4f9;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            width: 90%;
+            margin: auto;
+            position: relative;
+            max-width: 500px;
+        }
+
         .carousel {
             display: flex;
             transition: transform 0.5s ease;
-            width: 100%; /* Garante que o carrossel ocupe 100% da largura */
         }
+
         .carousel-page {
             min-width: 100%;
-            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
         }
+
         .carousel img {
             width: 100%;
-            border-radius: 8px;
+            height: auto;
+            border-radius: 10px;
         }
+
         .carousel-controls {
             display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            justify-content: space-between;
+            margin-top: 15px;
         }
+
         .carousel-button {
-            background-color: #0072c6;
+            padding: 8px 12px;
+            background-color: #003366;
             color: white;
             border: none;
-            padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            margin: 0 5px;
+            transition: background-color 0.3s ease;
         }
+
+        .carousel-button:hover {
+            background-color: #001f4d;
+        }
+
+        /* Banner de Entrega Grátis */
         .delivery-banner {
-            background-color: #ff9800;
-            color: white;
-            padding: 10px;
+            background-color: #003366;
+            color: #fff;
             text-align: center;
+            padding: 15px 0;
             font-size: 1.2em;
-            margin: 20px 0;
-            border-radius: 5px;
+            margin-top: 20px;
         }
-        .logo {
-            max-width: 150px; /* Define um tamanho máximo para a logo */
-            margin: 20px auto; /* Centraliza a logo */
-            display: block; /* Para que a logo se comporte como bloco e fique centralizada */
+
+        /* Estilo do vídeo */
+        .video-section {
+            padding: 30px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- Cabeçalho com Logo e Frases de Destaque -->
     <header>
-        <img src="sua_logo.png" alt="Logo Sherwin-Williams" class="logo"> <!-- Coloque a URL da sua logo aqui -->
-        <div class="dynamic-text" id="dynamic-text">Compre Tintas e Renove!</div>
+        <div class="header-content">
+            <img src="https://i.imgur.com/4CXkMO4.png" alt="Logo da Loja" class="logo">
+            <div class="header-text" id="dynamic-text"></div>
+        </div>
     </header>
+
+    <!-- Seção das Marcas Parceiras -->
+    <section class="brands-section">
+        <h2>Nossas Marcas</h2>
+        <div class="brands-container">
+            <img src="/logo/sherwin.png" alt="sherwin" class="brand-logo">
+            <img src="/logo/iquine.png" alt="iquine" class="brand-logo">
+            <img src="/logo/montana.png" alt="montana" class="brand-logo">
+            <img src="/logo/vonder.png" alt="vonder" class="brand-logo">
+            <img src="/logo/condor.png" alt="condor" class="brand-logo">
+        </div>
+    </section>
+
+    <!-- Seção de Contato e Imagem da Loja -->
+    <section class="contact-section">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipPQ4rSGitMKsV-yH0lHRY-molf8YVlKOTVEkeEH=s680-w680-h510" alt="Frente da Loja" class="store-image" onclick="window.open('https://maps.app.goo.gl/uv6SuyUdshVgCp3D7', '_blank')">
+        <div class="contact-info">
+            <p><strong>Endereço:</strong> Av Carlos Roberto Costa, 977, Iguatu, Ceara</p>
+            <a href="https://wa.me/5588996213293" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
+        </div>
+    </section>
 
     <!-- Seção de Vídeo -->
     <section class="video-section">
+        <h2>Conheça Nossa Loja</h2>
         <video controls>
-            <source src="video-tinta.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
+            <source src="/saveclip.app_b94537846070cdcab0e8d3aa654064bc_video_dashinit.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
         </video>
     </section>
 
     <!-- Carrossel de Ofertas -->
     <section class="carousel-section">
-        <h2>Nossas Ofertas</h2>
+        <h2>Ofertas e Promoções</h2>
         <div class="carousel-container">
             <div class="carousel" id="carousel">
                 <div class="carousel-page">
-                    <img src="https://i.imgur.com/v1IrXUu.jpg" alt="Promoção Página 1">
+                    <img src="https://yourimage1.jpg" alt="Promoção Página 1">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://i.imgur.com/qcF3owE.jpg" alt="Promoção Página 2">
+                    <img src="https://yourimage2.jpg" alt="Promoção Página 2">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://i.imgur.com/ECxij0V.jpg" alt="Promoção Página 3">
+                    <img src="https://yourimage3.jpg" alt="Promoção Página 3">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://i.imgur.com/sz2Q7Vi.jpg" alt="Promoção Página 4">
+                    <img src="https://yourimage4.jpg" alt="Promoção Página 4">
                 </div>
                 <div class="carousel-page">
-                    <img src="https://i.imgur.com/SOrGklk.jpg" alt="Promoção Página 5">
+                    <img src="https://yourimage5.jpg" alt="Promoção Página 5">
                 </div>
             </div>
             <div class="carousel-controls">
@@ -126,7 +279,7 @@
     </div>
 
     <script>
-        const texts = ["Compre Tintas e Renove!", "Pintura que Encanta!", "Cores que Inspiram!", "Sua Casa com Nova Cor!"];
+        const texts = ["Preços que Arrasam!", "Pintura que Encanta!", "Cores que Inspiram!"];
         let index = 0;
 
         function updateText() {
