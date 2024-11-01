@@ -29,8 +29,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            max-width: 100%;
-            height: auto;
+            position: relative;
+            overflow: hidden;
         }
 
         /* Estilo da logo */
@@ -38,7 +38,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
 
         .logo {
@@ -52,8 +51,6 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #ffdd57;
-            position: relative;
-            overflow: hidden;
             white-space: nowrap;
             border-right: 2px solid #ffdd57; /* Efeito de cursor */
             animation: blink-caret 0.75s step-end infinite;
@@ -214,7 +211,7 @@
     <header>
         <div class="header-content">
             <img src="https://i.imgur.com/4CXkMO4.png" alt="Logo da Loja" class="logo">
-            <div class="header-text" id="dynamic-text">Carregando...</div>
+            <div class="header-text" id="dynamic-text"></div>
         </div>
     </header>
 
@@ -297,7 +294,6 @@
 
         function updateCarousel() {
             const carousel = document.getElementById("carousel");
-            const totalSlides = document.querySelectorAll(".carousel-page").length;
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
@@ -311,6 +307,9 @@
             currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
             updateCarousel();
         }
+
+        // Iniciar a atualização do texto imediatamente
+        updateText();
     </script>
 </body>
 </html>
