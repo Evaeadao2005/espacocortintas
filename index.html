@@ -1,321 +1,354 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Espaço Cor - Loja de Tintas em Iguatu">
+    <meta name="description" content="Transforme seu ambiente com as melhores tintas. Espaço Cor oferece qualidade, entrega grátis e atendimento personalizado.">
+    <meta name="keywords" content="loja de tintas Iguatu, Sherwin Williams, tintas premium, Espaço Cor">
     <link rel="icon" href="logo.ico" type="image/x-icon">
-    <title>Espaço Cor Loja de Tintas</title>
+    <title>Espaço Cor - Loja de Tintas em Iguatu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
     <style>
-        /* Reset básico */
+        /* Reset e configurações gerais */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
 
-        /* Configurações de cor e fundo */
         body {
-            background-color: #f1f4f9;
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
             color: #333;
-            text-align: center;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
         }
 
         /* Cabeçalho */
         header {
-            background-color: #003366;
+            background-color: #003a70;
             color: white;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Estilo da logo */
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo {
-            width: 120px;
-            height: auto;
-            margin-right: 15px;
-        }
-
-        /* Animações de texto */
-        .header-text {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #ffdd57;
-            white-space: nowrap;
-            border-right: 2px solid #ffdd57; /* Efeito de cursor */
-            animation: blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #ffdd57; }
-        }
-
-        /* Seção das marcas parceiras */
-        .brands-section {
             padding: 20px 0;
-            background-color: #ffffff;
+            text-align: center;
         }
 
-        .brands-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 10px;
+        header img {
+            width: 120px;
+            margin-bottom: 15px;
         }
 
-        .brand-logo {
-            width: 80px;
-            height: auto;
+        header h1 {
+            font-size: 2rem;
         }
 
-        /* Seção de Contato */
-        .contact-section {
-            padding: 30px;
-            background-color: #e6eff7;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(90deg, #003a70, #005a9c);
+            color: white;
         }
 
-        .contact-info {
-            font-size: 1.1em;
-            line-height: 1.5;
+        .hero h2 {
+            font-size: 2.4rem;
+            margin-bottom: 15px;
         }
 
-        .whatsapp-button {
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #25D366;
-            color: #fff;
-            font-weight: bold;
-            text-decoration: none;
+            background-color: #ffc107;
+            color: #003a70;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
             border-radius: 5px;
-            margin-top: 15px;
             transition: background-color 0.3s ease;
         }
 
-        .whatsapp-button:hover {
-            background-color: #1ebf58;
+        .hero a:hover {
+            background-color: #ffb300;
         }
 
-        .store-image {
-            width: 80%;
-            max-width: 300px;
+        /* Sobre nós */
+        .about {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #003a70;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* Seção Marcas */
+        .brands {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .brands h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #003a70;
+        }
+
+        .brands img {
+            max-width: 120px;
+            margin: 0 15px;
+        }
+
+        /* Vídeo */
+        .video-section {
+            background-color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .video-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #003a70;
+        }
+
+        .video-section video {
+            width: 90%;
+            max-width: 800px;
             height: auto;
             border-radius: 10px;
-            margin: 15px 0;
-            cursor: pointer;
-            transition: transform 0.3s;
         }
 
-        .store-image:hover {
-            transform: scale(1.05);
-        }
-
-        /* Carrossel de Ofertas */
-        .carousel-section {
+        /* Carrossel */
+        .carousel {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
             text-align: center;
-            padding: 30px;
-            background-color: #f1f4f9;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #003a70;
         }
 
         .carousel-container {
-            overflow: hidden;
-            width: 90%;
-            margin: auto;
-            position: relative;
-            max-width: 500px;
-        }
-
-        .carousel {
             display: flex;
-            transition: transform 0.5s ease;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
         }
 
-        .carousel-page {
-            min-width: 100%;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 300px;
+            margin: 0 10px;
+            background-color: white;
+            border: 1px solid #ddd;
             border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
 
-        .carousel img {
+        .carousel-item img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .carousel-controls {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 15px;
-        }
-
-        .carousel-button {
-            padding: 8px 12px;
-            background-color: #003366;
-            color: white;
-            border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
-        .carousel-button:hover {
-            background-color: #001f4d;
+        .carousel-item img:hover {
+            transform: scale(1.1);
         }
 
-        /* Banner de Entrega Grátis */
-        .delivery-banner {
-            background-color: #003366;
-            color: #fff;
+        .carousel-item h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #003a70;
+        }
+
+        .carousel-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #003a70;
+            color: white;
             text-align: center;
-            padding: 15px 0;
-            font-size: 1.2em;
-            margin-top: 20px;
+            padding: 20px;
+            font-size: 0.9rem;
         }
 
-        /* Estilo do vídeo */
-        .video-section {
-            padding: 30px;
-        }
-
-        video {
+        /* Modais para expandir imagens */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
             width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            margin-top: 20px;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
         }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
-<body>
 
-    <!-- Cabeçalho com Logo e Frases de Destaque -->
+<body>
+    <!-- Cabeçalho -->
     <header>
-        <div class="header-content">
-            <img src="https://i.imgur.com/4CXkMO4.png" alt="Logo da Loja" class="logo">
-            <div class="header-text" id="dynamic-text"></div>
-        </div>
+        <img src="https://github.com/Evaeadao2005/espacocortintas/blob/main/logo/logo.png?raw=true" alt="Logo Espaço Cor">
+        <h1>Loja Espaço Cor</h1>
     </header>
 
-    <!-- Seção das Marcas Parceiras -->
-    <section class="brands-section">
-        <h2>Nossas Marcas</h2>
-        <div class="brands-container">
-            <img src="/logo/sherwin.png" alt="sherwin" class="brand-logo">
-            <img src="/logo/iquine.png" alt="iquine" class="brand-logo">
-            <img src="/logo/montana.png" alt="montana" class="brand-logo">
-            <img src="/logo/vonder.png" alt="vonder" class="brand-logo">
-            <img src="/logo/condor.png" alt="condor" class="brand-logo">
+    <!-- Hero -->
+    <section class="hero">
+        <h2>As melhores tintas para o seu projeto</h2>
+        <p>Entrega grátis em Iguatu. Marcas premium com garantia de qualidade.</p>
+        <a href="https://wa.me/5588996213293">Solicite seu orçamento</a>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section class="about">
+        <h2>Por que escolher a Espaço Cor?</h2>
+        <p>Somos especialistas em tintas premium, oferecendo produtos das melhores marcas do mercado, como Sherwin Williams e Suvinil. Nosso objetivo é ajudar você a transformar seu ambiente com qualidade e eficiência.</p>
+    </section>
+
+    <!-- Seção Marcas -->
+    <section class="brands">
+        <h2>Marcas que Trabalhamos</h2>
+        <div>
+            <img src="https://espacocoriguatu.com.br/logo/sherwin.png" alt="Sherwin Williams">
+            <img src="https://espacocoriguatu.com.br/logo/iquine.png" alt="Iquine">
+            <img src="https://espacocoriguatu.com.br/logo/condor.png" alt="Condor">
+            <img src="https://espacocoriguatu.com.br/logo/montana.png" alt="Montana">
+            <img src="https://espacocoriguatu.com.br/logo/Vonder.png" alt="Vonder">
         </div>
     </section>
 
-    <!-- Seção de Contato e Imagem da Loja -->
-    <section class="contact-section">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipPQ4rSGitMKsV-yH0lHRY-molf8YVlKOTVEkeEH=s680-w680-h510" alt="Frente da Loja" class="store-image" onclick="window.open('https://maps.app.goo.gl/uv6SuyUdshVgCp3D7', '_blank')">
-        <div class="contact-info">
-            <p><strong>Endereço:</strong> Av Carlos Roberto Costa, 977, Iguatu, Ceara</p>
-            <a href="https://wa.me/5588996213293" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
-        </div>
-    </section>
+    <!-- Imagem da Loja e Link para Google Maps -->
+<section class="store-location" style="text-align: center; margin: 40px 0;">
+    <a href="https://maps.app.goo.gl/2EjXoExPjTRkSAhJ9" target="_blank">
+        <img src="https://espacocoriguatu.com.br/frente%20de%20loja.jpg" alt="Frente da loja" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    </a>
+    <p style="margin-top: 10px; font-size: 1rem; color: #333;">Visite-nos ou clique na imagem para ver no Google Maps</p>
+</section>
 
-    <!-- Seção de Vídeo -->
+    <!-- Vídeo -->
     <section class="video-section">
-        <h2>Conheça Nossa Loja</h2>
+        <h2>Como ajudamos você a pintar seu espaço</h2>
         <video controls>
-            <source src="/saveclip.app_b94537846070cdcab0e8d3aa654064bc_video_dashinit.mp4" type="video/mp4">
-            Seu navegador não suporta a tag de vídeo.
+            <source src="https://espacocoriguatu.com.br/SaveClip.App_B94537846070CDCAB0E8D3AA654064BC_video_dashinit.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
         </video>
     </section>
 
-    <!-- Carrossel de Ofertas -->
-    <section class="carousel-section">
-        <h2>Ofertas e Promoções</h2>
+    <!-- Carrossel de Promoções -->
+    <section class="carousel">
+        <h2>Promoções Imperdíveis</h2>
         <div class="carousel-container">
-            <div class="carousel" id="carousel">
-                <div class="carousel-page">
-                    <img src="/Cartaz%20Oferta%20Supermercado%20(V%C3%ADdeo%20para%20dispositivos%20m%C3%B3veis)%20(2).jpg" alt="Página 1">
-                </div>
-                <div class="carousel-page">
-                    <img src="/WhatsApp%20Image%202024-11-28%20at%2006.41.57.jpeg" alt="Página 2">
-                </div>
-                <div class="carousel-page">
-                    <img src="/WhatsApp%20Image%202024-11-28%20at%2006.41.58.jpeg" alt="Página 3">
-                </div>
-                <div class="carousel-page">
-                    <img src="/WhatsApp%20Image%202024-11-28%20at%2006.41.59.jpeg" alt="Página 4">
-                </div>
-                <div class="carousel-page">
-                    <img src="/WhatsApp%20Image%202024-11-28%20at%2006.42.06.jpeg" alt="Página 5">
-                </div>
-   <div class="carousel-page">
-                    <img src="/WhatsApp%20Image%202024-11-28%20at%2006.42.09.jpeg" alt="Página 6">
-                </div>
-   <div class="carousel-page">
-                    <img src="/WhatsApp%20Image%202024-11-28%20at%2010.41.28.jpeg" alt="Página 7">
-                </div>
+            <div class="carousel-item">
+                <img src="https://espacocoriguatu.com.br/promo1.jpeg" alt="Promoção 1">
             </div>
-            <div class="carousel-controls">
-                <button class="carousel-button" onclick="prevSlide()">Anterior</button>
-                <button class="carousel-button" onclick="nextSlide()">Próximo</button>
+            <div class="carousel-item">
+                <img src="https://espacocoriguatu.com.br/promo2.jpeg" alt="Promoção 2">
+            </div>
+    <div class="carousel-item">
+                <img src="https://espacocoriguatu.com.br/promo3.jpeg" alt="Promoção 3">
+            </div>    <div class="carousel-item">
+                <img src="https://espacocoriguatu.com.br/BLACKFRIDAY-PAG1.jpeg" alt="Promoção 4">
+            </div>
+  <div class="carousel-item">
+                <img src="https://espacocoriguatu.com.br/BLACKFRIDAY-PAG2.jpeg" alt="Promoção 5">
             </div>
         </div>
     </section>
 
-    <!-- Banner de Entrega Grátis -->
-    <div class="delivery-banner">
-        🚚 Entregas Grátis em Iguatu! 🌈
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Espaço Cor - Todos os direitos reservados - Criado com ❤️ por @victordalmon</p>
+    </footer>
+
+    <!-- Modal para expandir imagem -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
 
     <script>
-        const texts = ["Preços que Arrasam!", "Pintura que Encanta!", "Cores que Inspiram!"];
-        let index = 0;
-
-        function updateText() {
-            const dynamicText = document.getElementById("dynamic-text");
-            dynamicText.textContent = texts[index];
-            index = (index + 1) % texts.length;
+        // Função para abrir o modal
+        function openModal(imgSrc) {
+            var modal = document.getElementById('modal');
+            var modalImg = document.getElementById('modalImage');
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
         }
 
-        setInterval(updateText, 3000); // Troca de texto a cada 3 segundos
-
-        let currentSlide = 0;
-
-        function updateCarousel() {
-            const carousel = document.getElementById("carousel");
-            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        // Função para fechar o modal
+        function closeModal() {
+            var modal = document.getElementById('modal');
+            modal.style.display = "none";
         }
 
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % document.querySelectorAll(".carousel-page").length;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            const totalSlides = document.querySelectorAll(".carousel-page").length;
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        // Iniciar a atualização do texto imediatamente
-        updateText();
+        // Atribuindo evento de clique para imagens do carrossel
+        var images = document.querySelectorAll('.carousel-item img');
+        images.forEach(function(image) {
+            image.onclick = function() {
+                openModal(image.src);
+            }
+        });
     </script>
 </body>
+
 </html>
